@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Supplement Supplies</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <main>
+    <div class="header">
+      <h1>My Medications</h1>
+      <button id="add--supplement" class="circle plus"></button>
+    </div>
+
+    <div id="filter">
+      <ul id="filter-list">
+        <li>
+          <a id="filter--all" class="filter-link active">
+            All
+          </a>
+        </li>
+        <li>
+          <a id="filter--vitamins" class="filter-link">
+            Vitamins
+          </a>
+        </li>
+        <li>
+          <a id="filter--prescriptions" class="filter-link">
+            Prescriptions
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <ul id="vitamins" class="med-list"></ul>
+
+
+    <ul id="prescriptions" class="med-list"></ul>
+  </main>
+
+  <!-- Create Form -->
+  <div id="modal--form">
+    <form id="supplement-form">
+      <div class="form--header">
+        <h2>Add a new medicine or vitamin</h2>
+        <button id="form--close" class="circle cross"></button>
+      </div>
+      <ul>
+        <li>
+          <label>What is the name of the medicine?</label>
+          <input id="supplement-name" type="text" name="name" placeholder="Tap to enter" />
+        </li>
+        <li>
+          <label>What is the dosage strength?</label>
+          <input id="supplement-dosage" type="text" name="dosage" placeholder="Set a strength" />
+        </li>
+        <li>
+          <label>How many are taken per day?</label>
+          <input id="supplement-qty-day" type="number" name="frequency" placeholder="1" />
+        </li>
+        <li>
+          <label>Enter quantity remaining</label>
+          <input id="supplement-qty" type="number" name="qty" placeholder="Units remaining" />
+        </li>
+        <li>
+          <p>Is this a vitamin or prescription?</p>
+          <div class="switch-field">
+            <input type="radio" id="supplement-vitamin" name="category" value="vitamin" checked />
+            <label for="supplement-vitamin">Vitamin</label>
+            <input type="radio" id="supplement-prescription" name="category" value="prescription" />
+            <label for="supplement-prescription">Prescription</label>
+          </div>
+        </li>
+      </ul>
+      <button id="supplement-submit">Save</button>
+    </form>
+  </div>
+
+  <!-- Update Form -->
+  <div id="modal--update-form">
+    <form id="form--update-form">
+      <div class="form--header">
+        <h2>Edit Medication</h2>
+        <button id="update-form--close" class="circle cross"></button>
+      </div>
+      <ul>
+        <li>
+          <label>What is the name of the medicine?</label>
+          <input id="update-name" type="text" name="update-name" placeholder="Tap to enter" />
+        </li>
+        <li>
+          <label>What is the dosage strength?</label>
+          <input id="update-dosage" type="text" name="update-dosage" placeholder="Set a strength" />
+        </li>
+        <li>
+          <label>How many are taken per day?</label>
+          <input id="update-freq" type="number" name="update-freq" placeholder="1" />
+        </li>
+        <li>
+          <label>Enter quantity remaining</label>
+          <input id="update-qty" type="number" name="update-qty" placeholder="Units remaining" />
+        </li>
+      </ul>
+      <button id="supplement-update">Save</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>
